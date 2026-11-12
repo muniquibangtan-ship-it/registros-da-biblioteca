@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca | Cadastro de Livros</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <span class="icone-logo">📚</span>
+            <div>
+                <h2>BookSpace</h2>
+                <p>Sistema de Biblioteca</p>
+            </div>
+        </div>
+        <span class="status">● Sistema ativo</span>
+    </header>
+
+    <main class="container">
+
+        <section class="apresentacao">
+            <span class="etiqueta">GERENCIAMENTO DE ACERVO</span>
+            <h1>Cadastro de <span>Livros</span></h1>
+            <p>Organize e gerencie os livros da sua biblioteca em um só lugar.</p>
+        </section>
+
+        <section class="painel">
+
+            <div class="titulo-painel">
+                <div class="icone-titulo">✚</div>
+                <div>
+                    <h2>Adicionar novo livro</h2>
+                    <p>Preencha as informações abaixo.</p>
+                </div>
+            </div>
+
+            <form id="formulario">
+
+                <div class="campo">
+                    <label for="nome">Nome do livro</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Ex: O Pequeno Príncipe"
+                        maxlength="80"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Ficção">Ficção</option>
+                        <option value="Suspense">Suspense</option>
+                        <option value="Educação">Educação</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="botao">
+                    + Adicionar livro
+                </button>
+
+            </form>
+        </section>
+
+        <section class="lista-painel">
+
+            <div class="cabecalho-lista">
+                <div>
+                    <h2>Livros cadastrados</h2>
+                    <p>Confira os itens adicionados à biblioteca.</p>
+                </div>
+
+                <div class="contador">
+                    <span id="quantidade">0</span>
+                    <small>livros</small>
+                </div>
+            </div>
+
+            <div id="listaLivros" class="lista-livros">
+                <div class="vazio">
+                    <span>📖</span>
+                    <h3>Nenhum livro cadastrado</h3>
+                    <p>Adicione seu primeiro livro para começar.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>BookSpace © 2026 | Projeto FIC Informática</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
